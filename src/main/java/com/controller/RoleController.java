@@ -48,7 +48,8 @@ public class RoleController {
 		model.addAttribute("role",role);
 		return "ListRole";
 	}
-	@RequestMapping(value = "/deleterole", method = RequestMethod.GET)
+//	@RequestMapping(value = "/deleterole", method = RequestMethod.GET)
+	@GetMapping("/deleterole")
 	public String deleteRole(@RequestParam int userid, Model model) {
 		System.out.println(userid);
 		dao.deleterole(userid);

@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Image</h1>
-
+	<!-- present image without database -->
 	<img
 		src="${image}"
 		alt="this image is not availible" weight="600px" height="600px"

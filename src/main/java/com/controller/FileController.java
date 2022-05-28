@@ -51,8 +51,9 @@ public class FileController {
 		
 	}
 	
-	@GetMapping("/viewImage")
+	@GetMapping("/viewimage")
 	public String viewimage(@RequestParam("image") String str, Model model) {
+		System.out.println(str);
 		model.addAttribute("image",str);
 		return "viewImage";
 	}

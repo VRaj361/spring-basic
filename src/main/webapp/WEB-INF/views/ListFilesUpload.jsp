@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- image list without database -->
 	<h2>All Images</h2>
 	<table border=1>
 		<tr>
@@ -17,7 +18,7 @@
 		<c:forEach items="${files}" var="f">
 			<tr>
 				<td>${f}</td>
-				<td><a href="viewImage?image=${f}">${f}</a></td>
+				<td><a href="viewimage?image=${f}">${f}</a></td>
 			</tr>
 		</c:forEach>
 	</table>

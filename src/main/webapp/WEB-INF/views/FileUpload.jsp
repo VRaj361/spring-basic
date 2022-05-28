@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- file upload main page without database -->
 	<form action="saveprofile" method="post" enctype="multipart/form-data">
 		Title:<input type="text" name="title">
 		<br>
