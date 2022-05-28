@@ -1,5 +1,9 @@
 package com.bean;
 
+import javax.validation.constraints.NotNull;
+
+import org.springframework.web.multipart.MultipartFile;
+
 public class UserFileBean {
 	
 	private int userid;
@@ -10,10 +14,30 @@ public class UserFileBean {
 	private String email;
 	@javax.validation.constraints.NotBlank(message = "Please Enter Password")
 	private String password;
-
+	
 	private String profileurl;
 	
+	private String defaultpic;
 	
+	@NotNull
+	private  MultipartFile profilePic; 
+	
+	public MultipartFile getProfilePic() {
+		return profilePic;
+	}
+
+	public void setProfilePic(MultipartFile profilePic) {
+		this.profilePic = profilePic;
+	}
+
+	public String getDefaultpic() {
+		return defaultpic;
+	}
+
+	public void setDefaultpic(String defaultpic) {
+		this.defaultpic = defaultpic;
+	}
+
 	public int getUserid() {
 		return userid;
 	}
