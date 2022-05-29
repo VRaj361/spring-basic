@@ -18,6 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.bean.UserFileBean;
 import com.dao.FileDBDao;
+import com.service.EmailService;
 import com.service.UploadDBService;
 
 @Controller
@@ -28,6 +29,9 @@ public class FileDBController {
 
 	@Autowired
 	FileDBDao dao;
+	
+	@Autowired
+	EmailService emailService;
 
 	@GetMapping("/fileuploaddb")
 	public String fileUploadDB(Model model) {
@@ -62,6 +66,7 @@ public class FileDBController {
 			if (upload) {
 				bean.setProfileurl(bean.getEmail() + "/" + file.getOriginalFilename());
 				dao.insertUser(bean);
+				emailService.welcomeEmail(bean.getEmail(),"333333");
 			} else {
 				System.out.println("failed");
 			}
